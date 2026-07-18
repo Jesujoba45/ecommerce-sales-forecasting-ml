@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Forecast App</title>
+</head>
+<body>
+    <h2>Predict Sales</h2>
+    <form action="/predict" method="post">
+        <label>Discount:</label><input type="text" name="Discount"><br>
+        <label>Profit:</label><input type="text" name="Profit"><br>
+        <label>Quantity:</label><input type="text" name="Quantity"><br>
+        <label>Category (0/1/2):</label><input type="text" name="Category"><br>
+        <label>Sub-Category:</label><input type="text" name="Sub_Category"><br>
+        <label>Region:</label><input type="text" name="Region"><br>
+        <label>Segment:</label><input type="text" name="Segment"><br>
+        <label>Ship Mode:</label><input type="text" name="Ship_Mode"><br>
+        <label>Order Month:</label><input type="text" name="Order_Month"><br>
+        <label>Order Year:</label><input type="text" name="Order_Year"><br>
+        <label>Order DayOfWeek:</label><input type="text" name="Order_DayOfWeek"><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
